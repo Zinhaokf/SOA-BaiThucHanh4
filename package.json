@@ -1,0 +1,19 @@
+{
+  "name": "soa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "auth": "cd BaiThucHanh2 && node server.js",
+    "product": "cd BaiThucHanh3 && node index.js",
+    "order": "cd BaiThucHanh4 && node index.js",
+    "start": "concurrently -n auth,product,order \"npm:auth\" \"npm:product\" \"npm:order\"",
+    "install:all": "npm install && cd BaiThucHanh2 && npm install && cd ../BaiThucHanh3 && npm install && cd ../BaiThucHanh4 && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}
